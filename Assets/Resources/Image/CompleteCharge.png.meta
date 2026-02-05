@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: ab2421183d0977b4483924f6b365c0ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6553808122419926649
+    second: CompleteCharge_0
+  - first:
+      213: -1358157132600261898
+    second: CompleteCharge_1
+  - first:
+      213: -8878775106532942134
+    second: CompleteCharge_2
+  - first:
+      213: 2347410402587254762
+    second: CompleteCharge_3
+  - first:
+      213: 1779122153582739012
+    second: CompleteCharge_4
+  - first:
+      213: -5074530777899195897
+    second: CompleteCharge_5
+  - first:
+      213: -6475130867872657240
+    second: CompleteCharge_6
+  - first:
+      213: -8241793323351171722
+    second: CompleteCharge_7
+  - first:
+      213: -8403014367293831871
+    second: CompleteCharge_8
+  - first:
+      213: -3339924189017641471
+    second: CompleteCharge_9
+  - first:
+      213: 6771911218891779559
+    second: CompleteCharge_10
+  - first:
+      213: 2633679560440221658
+    second: CompleteCharge_11
+  - first:
+      213: 266908039835486405
+    second: CompleteCharge_12
+  - first:
+      213: -7561713782063038035
+    second: CompleteCharge_13
+  - first:
+      213: -1908832293788124889
+    second: CompleteCharge_14
+  - first:
+      213: 4004608457275660229
+    second: CompleteCharge_15
+  - first:
+      213: -5390771312994353255
+    second: CompleteCharge_16
+  - first:
+      213: 5381846487526742252
+    second: CompleteCharge_17
+  - first:
+      213: 1990897283359491841
+    second: CompleteCharge_18
+  - first:
+      213: -7349396118313027807
+    second: CompleteCharge_19
+  - first:
+      213: 7334214902078433978
+    second: CompleteCharge_20
+  - first:
+      213: -295767197358603434
+    second: CompleteCharge_21
+  - first:
+      213: 6178286708451100598
+    second: CompleteCharge_22
+  - first:
+      213: 8994594539764264845
+    second: CompleteCharge_23
+  - first:
+      213: 6643102056905035881
+    second: CompleteCharge_24
+  - first:
+      213: 763127739126354428
+    second: CompleteCharge_25
+  - first:
+      213: -998875555389287290
+    second: CompleteCharge_26
+  - first:
+      213: 3953222812252695383
+    second: CompleteCharge_27
+  - first:
+      213: -2771891708359135147
+    second: CompleteCharge_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CompleteCharge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976d8e683cdc3fa50800000000000000
+      internalID: 6553808122419926649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 210
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2c232a84bd62de0800000000000000
+      internalID: -1358157132600261898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aced586151148c480800000000000000
+      internalID: -8878775106532942134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 180
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef1544f25da39020800000000000000
+      internalID: 2347410402587254762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44eb3582c26b0b810800000000000000
+      internalID: 1779122153582739012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 150
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 702288db425a399b0800000000000000
+      internalID: -5074530777899195897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0984a48c6b326a0800000000000000
+      internalID: -6475130867872657240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 120
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d9779a3a44f9d80800000000000000
+      internalID: -8241793323351171722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14582fa34fe726b80800000000000000
+      internalID: -8403014367293831871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 90
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e6ed055a436a1d0800000000000000
+      internalID: -3339924189017641471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ede68cdf59aafd50800000000000000
+      internalID: 6771911218891779559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 60
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf0f3c3b95bc8420800000000000000
+      internalID: 2633679560440221658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c80716b27f34b300800000000000000
+      internalID: 266908039835486405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 30
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da105fef0656f0790800000000000000
+      internalID: -7561713782063038035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteCharge_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729f6f864277285e0800000000000000
+      internalID: -1908832293788124889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 668dddd65a5e1a14a9aeb720fc7f3fa8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":200.0,"y":30.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      CompleteCharge_0: 6553808122419926649
+      CompleteCharge_1: -1358157132600261898
+      CompleteCharge_10: 6771911218891779559
+      CompleteCharge_11: 2633679560440221658
+      CompleteCharge_12: 266908039835486405
+      CompleteCharge_13: -7561713782063038035
+      CompleteCharge_14: -1908832293788124889
+      CompleteCharge_2: -8878775106532942134
+      CompleteCharge_3: 2347410402587254762
+      CompleteCharge_4: 1779122153582739012
+      CompleteCharge_5: -5074530777899195897
+      CompleteCharge_6: -6475130867872657240
+      CompleteCharge_7: -8241793323351171722
+      CompleteCharge_8: -8403014367293831871
+      CompleteCharge_9: -3339924189017641471
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
