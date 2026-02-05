@@ -8,13 +8,16 @@ public class PlayerControl : MonoBehaviour
     [Header("스태미너")]
     public float currentStamina = 200f;
     public float maxStamina = 200f;
-    public float staminaRegenRate = 200f; // 초당 회복량
+    public float defaultStaminaRegenRate = 200f; // 기본 초당 회복량
+    public float appliedStaminaRegenRate; // 적용되는 초당 회복량
+    public int moveCount = 0; // 이동 횟수
     public Slider staminaSlider1;
     public Slider staminaSlider2;
 
     void Start()
     {
-        Manager_Move.movePoint[playerIndex] = 3; // 세 번째 칸에 존재
+        Manager_Move.PlayerLife[playerIndex] = 5;
+        Reset(playerIndex);
     }
 
     void Update()
@@ -24,13 +27,27 @@ public class PlayerControl : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && Manager_Move.movePoint[playerIndex] > 1)
             {
+                // 이동할 자리에 상대가 있다면 승리
+                if (Manager_Move.movePoint[playerIndex] - 1 == Manager_Move.movePoint[playerIndex == 0 ? 1 : 0])
+                {
+                    Manager_Move.PlayerLife[playerIndex == 0 ? 1 : 0] -= 1;
+                }
+                // 실제 이동 처리
                 Manager_Move.movePoint[playerIndex] -= 1;
                 currentStamina -= 100f;
+                moveCount += 1;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && Manager_Move.movePoint[playerIndex] < 11)
             {
+                // 이동할 자리에 상대가 있다면 승리
+                if (Manager_Move.movePoint[playerIndex] + 1 == Manager_Move.movePoint[playerIndex == 0 ? 1 : 0])
+                {
+                    Manager_Move.PlayerLife[playerIndex == 0 ? 1 : 0] -= 1;
+                }
+                // 실제 이동 처리
                 Manager_Move.movePoint[playerIndex] += 1;
                 currentStamina -= 100f;
+                moveCount += 1;
             }
         }
 
@@ -38,15 +55,31 @@ public class PlayerControl : MonoBehaviour
         transform.position = new Vector3((Manager_Move.movePoint[playerIndex] - 6) * 1.5f, 0, 0);
         
         // 스태미너 UI 업데이트
-        if (currentStamina < 100f)
+        if (staminaSlider1 != null && staminaSlider2 != null)
         {
-            staminaSlider1.value = currentStamina / 100f;
-            staminaSlider2.value = 0f;
+            if (currentStamina < 100f)
+            {
+                staminaSlider1.value = currentStamina / 100f;
+                staminaSlider2.value = 0f;
+            }
+            else if (currentStamina >= 100f)
+            {
+                staminaSlider1.value = 1f;
+                staminaSlider2.value = (currentStamina - 100) / 100f;
+            }
         }
-        else if (currentStamina >= 100f)
+
+        // 스테미너 이동속도 비례 회복량 조정
+        if (moveCount > 3)
         {
-            staminaSlider1.value = 1f;
-            staminaSlider2.value = (currentStamina - 100) / 100f;
+            if (moveCount > 16)
+            {
+                appliedStaminaRegenRate = 100f; // 최소 회복량
+            }
+            else
+            {
+                appliedStaminaRegenRate = defaultStaminaRegenRate * Mathf.Pow(0.95f, moveCount - 3);
+            }
         }
     }
 
@@ -55,9 +88,19 @@ public class PlayerControl : MonoBehaviour
         // 스태미너 회복
         if (currentStamina < maxStamina)
         {
-            currentStamina += staminaRegenRate * Time.fixedDeltaTime;
+            currentStamina += appliedStaminaRegenRate * Time.fixedDeltaTime;
             if (currentStamina > maxStamina)
+            {
                 currentStamina = maxStamina;
+            }
         }
+    }
+
+    public void Reset(int PI)
+    {
+        currentStamina = maxStamina;
+        moveCount = 0;
+        appliedStaminaRegenRate = defaultStaminaRegenRate;
+        Manager_Move.movePoint[PI] = PI == 0 ? 3 : 9;
     }
 }
