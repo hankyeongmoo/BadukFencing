@@ -5,19 +5,23 @@ public class PlayerControl : MonoBehaviour
 {
     public int playerIndex = 0; // 플레이어 인덱스 (0 또는 1)
 
-    [Header("스태미너")]
+    [Header("스테미너")]
     public float currentStamina = 200f;
     public float maxStamina = 200f;
     public float defaultStaminaRegenRate = 200f; // 기본 초당 회복량
     public float appliedStaminaRegenRate; // 적용되는 초당 회복량
     public int moveCount = 0; // 이동 횟수
+
+    [Header("UI 요소(스테미너)")]
     public Slider staminaSlider1;
     public Slider staminaSlider2;
+    public Image FullStamina;
+
 
     void Start()
     {
         Manager_Move.PlayerLife[playerIndex] = 5;
-        Reset(playerIndex);
+        ResetStatus(playerIndex);
     }
 
     void Update()
@@ -57,6 +61,7 @@ public class PlayerControl : MonoBehaviour
         // 스태미너 UI 업데이트
         if (staminaSlider1 != null && staminaSlider2 != null)
         {
+            // 스테미너 슬라이더 값 설정
             if (currentStamina < 100f)
             {
                 staminaSlider1.value = currentStamina / 100f;
@@ -66,6 +71,18 @@ public class PlayerControl : MonoBehaviour
             {
                 staminaSlider1.value = 1f;
                 staminaSlider2.value = (currentStamina - 100) / 100f;
+            }
+
+            // 스테미너가 가득 찼을 때 FullStamina 이미지 활성화
+            if (currentStamina + appliedStaminaRegenRate * Time.fixedDeltaTime >= 100f && currentStamina < 100f)
+            {
+                GameObject FS = Instantiate(FullStamina.gameObject);
+                FS.transform.SetParent(staminaSlider1.transform, false);
+            }
+            else if (currentStamina + appliedStaminaRegenRate * Time.fixedDeltaTime >= 200f && currentStamina < 200f)
+            {
+                GameObject FS = Instantiate(FullStamina.gameObject);
+                FS.transform.SetParent(staminaSlider2.transform, false);
             }
         }
 
@@ -96,7 +113,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    public void Reset(int PI)
+    public void ResetStatus(int PI)
     {
         currentStamina = maxStamina;
         moveCount = 0;
