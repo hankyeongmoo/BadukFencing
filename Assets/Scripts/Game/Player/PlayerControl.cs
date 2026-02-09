@@ -1,8 +1,10 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+    [Header("플레이어 기본 설정")]
     public int playerIndex = 0; // 플레이어 인덱스 (0 또는 1)
 
     [Header("스테미너")]
@@ -17,11 +19,18 @@ public class PlayerControl : MonoBehaviour
     public Slider staminaSlider2;
     public Image FullStamina;
 
+    [Header("승패 판정")]
+    private float timer;
+    public SpriteRenderer playerSprite;
+    private Color appliedColor;
+
 
     void Start()
     {
+        playerSprite = GetComponent<SpriteRenderer>();
         Manager_Move.PlayerLife[playerIndex] = 5;
         ResetStatus(playerIndex);
+        appliedColor = playerSprite.color;
     }
 
     void Update()
@@ -29,30 +38,35 @@ public class PlayerControl : MonoBehaviour
         // 이동 (좌우 화살표 키 입력 처리)
         if (currentStamina > 100f)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && Manager_Move.movePoint[playerIndex] > 1)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && Manager_Move.movePoint[playerIndex] > 1 && !Manager_Move.isRoundStarting)
             {
                 // 이동할 자리에 상대가 있다면 승리
                 if (Manager_Move.movePoint[playerIndex] - 1 == Manager_Move.movePoint[playerIndex == 0 ? 1 : 0])
                 {
-                    Manager_Move.PlayerLife[playerIndex == 0 ? 1 : 0] -= 1;
+                    Manager_Move.whoWin = playerIndex;
                 }
                 // 실제 이동 처리
                 Manager_Move.movePoint[playerIndex] -= 1;
                 currentStamina -= 100f;
                 moveCount += 1;
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && Manager_Move.movePoint[playerIndex] < 11)
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && Manager_Move.movePoint[playerIndex] < 11 && !Manager_Move.isRoundStarting)
             {
                 // 이동할 자리에 상대가 있다면 승리
                 if (Manager_Move.movePoint[playerIndex] + 1 == Manager_Move.movePoint[playerIndex == 0 ? 1 : 0])
                 {
-                    Manager_Move.PlayerLife[playerIndex == 0 ? 1 : 0] -= 1;
+                    Manager_Move.whoWin = playerIndex;
                 }
                 // 실제 이동 처리
                 Manager_Move.movePoint[playerIndex] += 1;
                 currentStamina -= 100f;
                 moveCount += 1;
             }
+        }
+
+        if (Manager_Move.isRoundStarting)
+        {
+            ResetStatus(playerIndex);
         }
 
         // 현재 위치 시각화
@@ -110,6 +124,20 @@ public class PlayerControl : MonoBehaviour
             {
                 currentStamina = maxStamina;
             }
+        }
+
+        // 비활성화된 플레이어 스프라이트 깜빡임 효과
+        if ((Manager_Move.whoSpriteDisabled == playerIndex || Manager_Move.whoSpriteDisabled == 2) && Manager_Move.isRoundStarting)
+        {
+            timer += Time.fixedDeltaTime;
+            appliedColor.a = Mathf.Abs(Mathf.Sin(timer * 5f));
+            playerSprite.color = appliedColor;
+        }
+        else if (!Manager_Move.isRoundStarting)
+        {
+            appliedColor.a = 1f;
+            playerSprite.color = appliedColor;
+            timer = 0f;
         }
     }
 
